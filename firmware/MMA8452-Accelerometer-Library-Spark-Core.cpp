@@ -79,9 +79,9 @@ void MMA8452Q::read()
 
 	readRegisters(OUT_X_MSB, rawData, 6);  // Read the six raw data registers into data array
 	
-	x = (rawData[0]<<8 | rawData[1]) >> 6;  // TRYING SOMETHING
-	y = (rawData[2]<<8 | rawData[3]) >> 6;
-	z = (rawData[4]<<8 | rawData[5]) >> 6;
+	x = (rawData[0]<<8 | rawData[1]) >> 2;  // TRYING SOMETHING
+	y = (rawData[2]<<8 | rawData[3]) >> 2;
+	z = (rawData[4]<<8 | rawData[5]) >> 2;
 	cx = (float) x / (float)(1<<11) * (float)(scale);
 	cy = (float) y / (float)(1<<11) * (float)(scale);
 	cz = (float) z / (float)(1<<11) * (float)(scale);
