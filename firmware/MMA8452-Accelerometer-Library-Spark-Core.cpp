@@ -48,10 +48,10 @@ byte MMA8452Q::init(MMA8452Q_Scale fsr, MMA8452Q_ODR odr)
 	
 	byte c = readRegister(WHO_AM_I);  // Read WHO_AM_I register
 	
-	if (c != 0x2A) // WHO_AM_I should always be 0x2A
-	{
-		return 0;
-	}
+	//if (c != 0x2A) // WHO_AM_I should always be 0x2A
+	//{
+//		return 0;
+//	}
 	
 	standby();  // Must be in standby to change registers
 	
